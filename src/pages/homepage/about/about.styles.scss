@@ -1,0 +1,4 @@
+.about {
+    grid-template-columns: 80px repeat(2, 1fr) 80px;
+    grid-template-rows: repeat(2, 50vh);
+}
