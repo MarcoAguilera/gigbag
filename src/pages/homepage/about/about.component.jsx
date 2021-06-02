@@ -3,7 +3,7 @@ import InnerTile from '../../../component/inner-tile/inner-tile.component';
 import InfoCard from '../../../component/info-card/info-card.component';
 import './about.styles.scss';
 
-const About = () => {
+const AboutSection = () => {
 
     return (
         <>
@@ -20,7 +20,7 @@ const About = () => {
             </InnerTile>
             <InnerTile grid={{ gridCol: 2, gridRow: 4 }} >
                 <InfoCard 
-                heading={"What choose us?"}
+                heading={"Why choose us?"}
                 body={"Handling requests through Instagram and Facebook is tedious work. We’ve built gigbag to relieve you of that headache, and in the process getting you more clients"}
                 
                 />
@@ -33,4 +33,4 @@ const About = () => {
     )
 };
 
-export default About;
+export default AboutSection;

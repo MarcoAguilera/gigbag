@@ -1,0 +1,14 @@
+.heading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    text-align: left;
+    
+
+    .title {
+        font-weight: bold;
+        font-size: 50px;
+        color: white;
+    }
+}
