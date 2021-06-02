@@ -1,9 +1,11 @@
 import React from 'react';
-import GROUP_DATA from '../../redux/group-data';
 import GroupCard from '../../component/group-card/group-card.component';
+import FilterBar from '../../component/filter-bar/filter-bar.component';
+import GroupView from '../../component/group-view/group-view.component';
+
+import GROUP_DATA from '../../redux/group-data';
 
 import './explore.styles.scss';
-import { logDOM } from '@testing-library/dom';
 
 class Explore extends React.Component {
     constructor(props) {
@@ -18,12 +20,12 @@ class Explore extends React.Component {
     render() {
         return (
             <div className='explore'>
-            {   
-                
-                this.state.data.map((group) => 
-                    <GroupCard key={group.id} {...group} />
-                )
-            }
+                <FilterBar />
+                <div className='container'>
+                    <GroupView groups={this.state.data} />
+                    {/* <GroupView groups={this.state.data} /> */}
+                    {/* <GroupView groups={this.state.data} /> */}
+                </div>
             </div>          
         );
     }

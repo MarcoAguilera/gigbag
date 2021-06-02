@@ -1,10 +1,30 @@
 .explore {
+    position: relative;
     background-color: #E56B6B;
     width: 100%;
     min-height: 100vh;
-    max-height: fit-content; 
+    max-height: max-content; 
+    padding-bottom: 100px;
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    .container {
+        background-color: gray;
+        position: relative;
+        right: 100px;
+        margin-left: auto;
+        top: 80px;
+        width: calc(100% - 200px - 223px);
+        min-height: 100vh;
+        max-height: fit-content;
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: space-between;
+        // background-color: gray;
+        // position: relative;
+        // left: 100px;
+        // width: calc(100% - 200px);
+        // top: 80px;
+        // min-height: calc(100vh - 80px);
+        // max-height: fit-content;
+        
+    }
 }

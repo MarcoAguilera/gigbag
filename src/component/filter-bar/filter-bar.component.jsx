@@ -2,7 +2,9 @@ import React from 'react';
 import './filter-bar.styles.scss';
 
 const FilterBar = () => (
-    <div className=''>
-
+    <div className='filter-bar'>
+    
     </div>
 )
+
+export default FilterBar;
