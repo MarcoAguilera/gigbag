@@ -3,6 +3,7 @@ import GROUP_DATA from '../../redux/group-data';
 import GroupCard from '../../component/group-card/group-card.component';
 
 import './explore.styles.scss';
+import { logDOM } from '@testing-library/dom';
 
 class Explore extends React.Component {
     constructor(props) {
@@ -17,10 +18,11 @@ class Explore extends React.Component {
     render() {
         return (
             <div className='explore'>
-            {
-                this.state.data.map((group) => {
-                    <GroupCard {...group} />
-                })
+            {   
+                
+                this.state.data.map((group) => 
+                    <GroupCard key={group.id} {...group} />
+                )
             }
             </div>          
         );
