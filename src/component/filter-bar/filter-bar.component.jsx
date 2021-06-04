@@ -1,6 +1,5 @@
 import React from 'react';
 import CheckBox from '../checkbox/checkbox.component';
-import GENRES from '../../redux/genres';
 import './filter-bar.styles.scss';
 
 

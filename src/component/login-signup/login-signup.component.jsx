@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Container} from './login-signup.styles'
-import { ReactComponent as  Facebook } from '../../assets/facebook.svg';
-import { ReactComponent as  Instagram } from '../../assets/Insta.svg';
-import { ReactComponent as  Twitter } from '../../assets/Twitter.svg';
+import { ReactComponent as  FacebookLogin } from '../../assets/facebook.svg';
+import { ReactComponent as  InstagramLogin } from '../../assets/Insta.svg';
+import { ReactComponent as  TwitterLogin } from '../../assets/Twitter.svg';
 import InputField from '../input-field/input-field.component';
+import CustomButton from '../custom-button/custom-button.component';
 
 
 const Card = styled.div`
@@ -12,7 +13,7 @@ const Card = styled.div`
     top: calc(90px);
     left: 50%;
     transform: translateX(-50%);
-    width: 500px;
+    width: 460px;
     height: 650px;
     background-color: #AC2727;
 
@@ -20,6 +21,7 @@ const Card = styled.div`
         color: white;
         font-weight: bold;
         font-size: 40px;
+        margin-bottom: 30px;
     }
 `;
 
@@ -27,21 +29,43 @@ const LoginServicesDiv = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    width: 100%;
 `;
 
 const LayoutDiv = styled.div`
     width: 300px;
     height: fit-content;
-    background-color: green;
     text-align: center;
     position: relative;
     top: 50%;
     left: 50%;
     transform:translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     p {
-        font-size: 19px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 17px;
         color: white;
+
+    }
+`;
+
+const Label = styled.label`
+    font-family: inherit;
+    color: white;
+    font-size: 11px;
+    display: block;
+    text-align: ${props => props.align};
+    margin-top: ${props => props.margin};
+    margin-bottom: 10px;
+    width: 88%;
+
+    span {
+        color: #2350d2;
+        text-decoration: underline;
     }
 `;
 
@@ -66,6 +90,10 @@ class LoginSignUp extends React.Component {
         });
     }
 
+    handleSubmit(e) {
+        e.preventDefault();
+    }
+
     render() {
         return (
             <Container>
@@ -73,13 +101,16 @@ class LoginSignUp extends React.Component {
                     <LayoutDiv>
                         <h1>Log In</h1>
                         <LoginServicesDiv>
-                            <Facebook />
-                            <Twitter />
-                            <Instagram />
+                            <FacebookLogin />
+                            <TwitterLogin />
+                            <InstagramLogin />
                         </LoginServicesDiv>
                         <p>or use your email</p>
-                        <InputField label='Email' type='text' value={this.state.email} handleChange={this.handleChange} />
+                        <InputField label='Email' type='text' value={this.state.email} handleChange={this.handleChange} bottom="10px" />
                         <InputField label='Password' type='password' value={this.state.password} handleChange={this.handleChange} />
+                        <Label align="right" margin="10px">Forgot password?</Label>
+                        <CustomButton color="#EF4747" handleClick={this.handleSubmit} name="Submit" />
+                        <Label align="center" margin="10px">Don't have an account? <span> Create New One</span></Label>
                     </LayoutDiv>
                 </Card>
             </Container>

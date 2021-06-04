@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const LabelContainer = styled.div`
-    width: 100%
+    width: 88%;
     text-align: left;
     
     label {
@@ -22,13 +22,15 @@ const LabelContainer = styled.div`
         color: #959595;
         font-family: inherit;
         padding: 5px 10px;
-        margin-bottom: 10px;
+        margin-bottom: ${props => props.bottom || "0px"}
     }
 `;
 
-const InputField = ({label, handleChange, type, value}) => {
+
+
+const InputField = ({label, handleChange, type, value, bottom}) => {
     return (
-        <LabelContainer>
+        <LabelContainer bottom={bottom} >
             <label>{label}</label>
             <input type={type} name={label} onChange={handleChange} value={value} placeholder={label} />
         </LabelContainer>
