@@ -2,6 +2,8 @@ import './App.css';
 import HomePage from './pages/homepage/homepage.component';
 import Explore from './pages/explore/explore.component';
 import Header from './component/header/header.component';
+import LoginSignUp from './component/login-signup/login-signup.component';
+
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -15,6 +17,9 @@ function App() {
         </Route>
         <Route path='/explore'>
           <Explore />
+        </Route>
+        <Route path='/login'>
+          <LoginSignUp />
         </Route>
       </Switch>
     </div>

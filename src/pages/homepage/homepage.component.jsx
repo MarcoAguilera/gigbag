@@ -9,18 +9,12 @@ import ExpandNav from '../../component/expand-nav/expand-nav.component';
 const HomePage = () => {
     return (
         <div className='home'>
-            {/* <ExpandNav open={this.state.navOpen ? true : false}/> */}
-
             <div className='overlay'>
-                {/* <SideNav handleNavClick={this.handleNavClick} grid={{
-                    gridCol: 1
-                }}/> */}
                 <LandingSection />
                 <AboutSection />
             </div>
         </div>
     )
-    
 };
 
 export default HomePage;

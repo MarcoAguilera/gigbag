@@ -4,27 +4,28 @@
     width: 100%;
     min-height: 100vh;
     max-height: max-content; 
-    padding-bottom: 100px;
+    padding-bottom: 180px;
 
     .container {
-        background-color: gray;
+        
         position: relative;
         right: 100px;
         margin-left: auto;
-        top: 80px;
-        width: calc(100% - 200px - 223px);
+        top: 150px;
+        width: calc(100% - 200px - 253px);
         min-height: 100vh;
         max-height: fit-content;
-        // display: flex;
-        // flex-direction: row;
-        // justify-content: space-between;
-        // background-color: gray;
-        // position: relative;
-        // left: 100px;
-        // width: calc(100% - 200px);
-        // top: 80px;
-        // min-height: calc(100vh - 80px);
-        // max-height: fit-content;
-        
-    }
+    } 
+}
+
+.explore::before {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    content: "";
+    background-image: url('../../assets/pexels-los-muertos-crew-7772341.jpg');
+    background-size: cover;
+
 }
