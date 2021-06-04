@@ -11,12 +11,13 @@ export const Container = styled.div`
     overflow-x: hidden;
 `;
 
+
 export const Card = styled.div`
     position: relative;
     top: calc(90px);
     left: 50%;
     transform: translateX(-50%);
-    width: 500px;
+    width: 460px;
     height: 650px;
     background-color: #AC2727;
 
@@ -24,5 +25,6 @@ export const Card = styled.div`
         color: white;
         font-weight: bold;
         font-size: 40px;
+        margin-bottom: 30px;
     }
 `;

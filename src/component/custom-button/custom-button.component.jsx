@@ -4,8 +4,7 @@ import styled, {css} from 'styled-components';
 const Button = styled.button`
     background-color: ${props => props.color || "white" };
 
-    width: 45px;
-    width: 225px;
+    width: ${props=> props.width || "225px"};
     color: white;
     font-weight: 600;
     font-size: 18px;
@@ -16,9 +15,9 @@ const Button = styled.button`
     cursor: pointer;
 `;
 
-const CustomButton = ({name, handleClick, color}) => {
+const CustomButton = ({name, handleClick, color, width}) => {
     return (
-        <Button color={color} onClick={handleClick} >{name}</Button>
+        <Button color={color} onClick={handleClick} width={width} >{name}</Button>
     )
 };
 
