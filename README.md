@@ -6,6 +6,5 @@ Gigbag is a booking solution for both musicians and people looking to hire Regio
 - These Figma mockups will provide an initial starting point for the project.
 
 ### About Section
-![title](./figma_design/About/LP1.png)
-![title](./figma_design/About/LP2.png)
+| ![title](./figma_design/About/LP1.png) | ![title](./figma_design/About/LP2.png) |
 ![title](./figma_design/About/LP3.png)
