@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 2000;
 // Import Routes 
 const user = require('./api/routes/users');
 const auth = require('./api/routes/auth');
+const group = require('./api/routes/group');
 
 // connect to database
 connectDB();
@@ -16,6 +17,7 @@ app.use(express.json({extended: false}));
 // Define routes
 app.use('/api/users', user);
 app.use('/api/auth', auth);
+app.use('/api/groups', group);
 
 app.get('/', (req, res) => {
     console.log('Server started');

@@ -2,17 +2,19 @@ const mongoose = require('mongoose');
 
 const groupSchema = new mongoose.Schema({
     user: {
-        id: mongoose.Schema.Types.ObjectId,
-        ref: 'Users'
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    },
+    name: {
+        type: String,
+        required: true
     },
     phone: {
         type: String
     },
     genres: [{
-        name: {
             type: String,
             required: true
-        }
     }],
     rate: {
         type: Number,
